@@ -18,14 +18,14 @@ const ANIMATION = {
  * Generates and downloads a vCard contact file, with an improved method for iOS.
  */
 function saveContact() {
-    const name = 'Md. Nokib Uddin Nirob';
+    const name = 'Md. Zayed Iqbal';
     const organization = 'Roaming Tours & Travels';
-    const title = 'Executive - Sales & Marketing';
-    const officePhone = '01329-739734';
-    const personalPhone = '01931-807855';
-    const email = 'nokibnirob75@gmail.com';
+    const title = 'Senior Manager, Sales & Marketing';
+    const officePhone = '01332547036';
+    const personalPhone = '01708483282';
+    const email = 'sales@roamingbd.com';
     const secondaryEmail = '';
-    const website = 'https://www.linkedin.com/in/nokib-uddin-nirob-468287326';
+    const website = 'https://www.linkedin.com/in/zayediqbal';
     const address = 'House-25 (2nd Floor), Road-02, Sector-03, opposite of Shopno, Rajlokkhi, Uttara, Dhaka, Bangladesh';
 
     const nameParts = name.split(' ');
@@ -83,7 +83,7 @@ END:VCARD`;
  * Opens WhatsApp chat with predefined message
  */
 function openWhatsApp() {
-    const whatsappNumber = '8801329739734';
+    const whatsappNumber = '8801332547036';
     const message = 'Hello! I found your contact through your digital business card.';
     
     try {
