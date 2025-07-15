@@ -18,14 +18,14 @@ const ANIMATION = {
  * Generates and downloads a vCard contact file, with an improved method for iOS.
  */
 function saveContact() {
-    const name = 'S M Moniruzzaman';
-    const organization = 'Mind Mentor Overseas Ltd & Roaming Tours & Travels';
-    const title = 'CEO at Mind Mentor Overseas Ltd | CEO at Roaming Tours & Travels';
-    const officePhone = '01329-739728';
-    const personalPhone = '01989-199211';
-    const email = 'zaman.tuhin@mindmentoroverseas.com';
-    const secondaryEmail = 'zaman.tuhin@roamingbd.com';
-    const website = 'https://roamingbd.com/';
+    const name = 'Md. Nokib Uddin Nirob';
+    const organization = 'Roaming Tours & Travels';
+    const title = 'Executive - Sales & Marketing';
+    const officePhone = '01329-739734';
+    const personalPhone = '01931-807855';
+    const email = 'nokibnirob75@gmail.com';
+    const secondaryEmail = '';
+    const website = 'https://www.linkedin.com/in/nokib-uddin-nirob-468287326';
     const address = 'House-25 (2nd Floor), Road-02, Sector-03, opposite of Shopno, Rajlokkhi, Uttara, Dhaka, Bangladesh';
 
     const nameParts = name.split(' ');
@@ -41,7 +41,6 @@ TITLE:${title}
 TEL;TYPE=WORK,VOICE:${officePhone}
 TEL;TYPE=CELL,VOICE:${personalPhone}
 EMAIL;TYPE=WORK:${email}
-EMAIL;TYPE=WORK:${secondaryEmail}
 URL:${website}
 ADR;TYPE=WORK:;;${address}
 END:VCARD`;
@@ -84,7 +83,7 @@ END:VCARD`;
  * Opens WhatsApp chat with predefined message
  */
 function openWhatsApp() {
-    const whatsappNumber = '8801329739728';
+    const whatsappNumber = '8801329739734';
     const message = 'Hello! I found your contact through your digital business card.';
     
     try {

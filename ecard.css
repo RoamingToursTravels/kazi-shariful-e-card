@@ -192,6 +192,23 @@ body.dark-mode .btn-dark-toggle:hover {
     margin-top: 0.1rem;
 }
 
+/* Prevent blue link colors in Safari and other browsers */
+.ecard-contact a,
+.ecard-contact a:link,
+.ecard-contact a:visited,
+.ecard-contact a:hover,
+.ecard-contact a:active {
+    color: inherit !important;
+    text-decoration: none !important;
+    -webkit-text-fill-color: inherit !important;
+    -webkit-appearance: none !important;
+}
+
+.ecard-contact a:hover {
+    opacity: 0.8;
+    transition: opacity 0.3s ease;
+}
+
 /* ===== BUTTON STYLES ===== */
 .ecard-save-btn, .ecard-social-btn {
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
@@ -228,6 +245,17 @@ body.dark-mode .btn-dark-toggle:hover {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+}
+
+/* Prevent blue link colors for social buttons in Safari */
+.ecard-social-btn,
+.ecard-social-btn:link,
+.ecard-social-btn:visited,
+.ecard-social-btn:active {
+    color: white !important;
+    text-decoration: none !important;
+    -webkit-text-fill-color: white !important;
+    -webkit-appearance: none !important;
 }
 
 /* ===== FOOTER STYLES ===== */
@@ -341,7 +369,7 @@ body.dark-mode .btn-dark-toggle:hover {
     box-sizing: border-box;
 }
 
-/* Prevent text overflow */
+/* Prevent text overflow and ensure proper mobile display */
 .ecard-contact, .ecard-address, .ecard-name, .ecard-role, .ecard-department {
     word-wrap: break-word;
     word-break: break-word;
@@ -349,10 +377,70 @@ body.dark-mode .btn-dark-toggle:hover {
     overflow-wrap: break-word;
 }
 
+/* Ensure images are responsive */
+.ecard-logo, .ecard-photo-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Prevent horizontal overflow */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.ecard-main-card {
+    max-width: 100vw;
+    overflow: hidden;
+}
+
 /* Flexible container */
 .ecard-bg-pattern {
     padding: 10px;
     box-sizing: border-box;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+/* Ensure proper spacing on all devices */
+.ecard-contact-box, .ecard-save-btn, .ecard-social-row, .ecard-footer-box {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Touch-friendly buttons for all screen sizes */
+.ecard-save-btn {
+    min-height: 44px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+.ecard-social-btn {
+    min-height: 44px;
+    min-width: 44px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* Prevent zoom on input focus (iOS) */
+@media screen and (-webkit-min-device-pixel-ratio: 0) {
+    select, textarea, input[type="text"], input[type="password"], input[type="datetime"], input[type="datetime-local"], input[type="date"], input[type="month"], input[type="time"], input[type="week"], input[type="number"], input[type="email"], input[type="url"], input[type="search"], input[type="tel"], input[type="color"] {
+        font-size: 16px;
+    }
+}
+
+/* Safe area for devices with notches */
+@supports (padding: max(0px)) {
+    .ecard-bg-pattern {
+        padding-left: max(10px, env(safe-area-inset-left));
+        padding-right: max(10px, env(safe-area-inset-right));
+        padding-top: max(10px, env(safe-area-inset-top));
+        padding-bottom: max(10px, env(safe-area-inset-bottom));
+    }
 }
 
 /* Desktop and large tablets (768px and up) */
@@ -530,8 +618,65 @@ body.dark-mode .btn-dark-toggle:hover {
     }
 }
 
+/* Very small screens (below 320px) */
+@media (max-width: 319px) {
+    .ecard-bg-pattern {
+        padding: 3px;
+    }
+    
+    .ecard-main-card {
+        width: 98%;
+        padding: 0.5rem;
+        border-radius: 15px;
+        min-width: 280px;
+    }
+    
+    .ecard-logo {
+        max-width: 80px;
+    }
+    
+    .ecard-photo-img {
+        width: 70px;
+        height: 70px;
+        border-radius: 10px;
+    }
+    
+    .ecard-name {
+        font-size: 1.1rem;
+        line-height: 1.1;
+    }
+    
+    .ecard-role, .ecard-department {
+        font-size: 0.8rem;
+    }
+    
+    .ecard-contact {
+        font-size: 0.75rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .ecard-save-btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+        min-height: 44px; /* Touch-friendly */
+    }
+    
+    .ecard-social-btn {
+        width: 38px;
+        height: 38px;
+        margin: 0 3px;
+        font-size: 1rem;
+        min-height: 44px; /* Touch-friendly */
+        min-width: 44px;
+    }
+    
+    .ecard-footer-box {
+        font-size: 0.7rem;
+    }
+}
+
 /* Extra small phones (below 360px) */
-@media (max-width: 359px) {
+@media (max-width: 359px) and (min-width: 320px) {
     .ecard-bg-pattern {
         padding: 5px;
     }
