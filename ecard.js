@@ -22,7 +22,7 @@ function saveContact() {
     const organization = 'Mind Mentor Overseas';
     const title = 'Director';
     const officePhone = '+880 1721-014632';
-    const personalPhone = '+880 1329-739731';
+    const personalPhone = '+880 1332-547039';
     const email = 'kazisharifulislam@mindmentoroverseas.com';
     const secondaryEmail = '';
     const website = '';
@@ -83,7 +83,7 @@ END:VCARD`;
  * Opens WhatsApp chat with predefined message
  */
 function openWhatsApp() {
-    const whatsappNumber = '8801329739731';
+    const whatsappNumber = '8801332547039';
     const message = 'Hello! I found your contact through your digital business card.';
     
     try {
