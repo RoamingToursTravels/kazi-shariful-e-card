@@ -24,7 +24,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
-    <!-- Custom CSS -->
+    <!-- External CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="./ecard.css">
 </head>
 <body>
@@ -46,15 +47,14 @@
                     <div class="ecard-name-title flex-grow-1">
                         <h2 class="ecard-name animate-element" data-delay="400">Kazi Shariful Islam</h2>
                         <div class="ecard-role animate-element" data-delay="500">Director</div>
-                        <div class="ecard-department animate-element" data-delay="600">Management</div>
                     </div>
                 </div>
             </div>
 
             <div class="ecard-contact-box p-3 my-3 animate-element" data-delay="700">
-                <div class="ecard-contact mb-2 animate-element" data-delay="800">+880 1721-014632</div>
-                <div class="ecard-contact mb-2 animate-element" data-delay="850">+880 1329-739731 (WhatsApp)</div>
-                <div class="ecard-contact animate-element" data-delay="900">kazisharifulislam@mindmentoroverseas.com</div>
+                <div class="ecard-contact mb-2 animate-element" data-delay="800"><i class="fas fa-phone-alt"></i> <a href="tel:+8801721014632">+880 1721-014632</a></div>
+                <div class="ecard-contact mb-2 animate-element" data-delay="850"><i class="fab fa-whatsapp"></i> <a href="https://wa.me/8801329739731">+880 1329-739731</a></div>
+                <div class="ecard-contact animate-element" data-delay="900"><i class="fas fa-envelope"></i> <a href="mailto:kazisharifulislam@mindmentoroverseas.com">kazisharifulislam@mindmentoroverseas.com</a></div>
             </div>
 
             <a href="#" class="ecard-save-btn btn-block my-3 text-center text-decoration-none animate-element" data-delay="1000" onclick="saveContact()"><i class="fas fa-download me-2"></i>Save this contact</a>
@@ -71,7 +71,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js" defer></script>
     
     <!-- Custom JavaScript -->
     <script src="./ecard.js" defer></script>
